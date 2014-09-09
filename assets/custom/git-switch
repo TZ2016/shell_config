@@ -1,0 +1,8 @@
+#!/bin/bash
+N=$(git branch | wc -l)
+if [ $N -eq 1 ] ; then exit 0 ; fi
+
+C=$(git branch | grep -n "\*" | cut -f1 -d:)
+let "C = (C < N) ? C + 1 : 1"
+
+git checkout `git branch | head -"$C" | tail -1`

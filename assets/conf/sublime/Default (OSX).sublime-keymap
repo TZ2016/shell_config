@@ -1,0 +1,7 @@
+[
+  {
+    "keys": ["shift+enter"],
+    "command": "run_macro_file",
+    "args": {"file": "Packages/User/start-new-line.sublime-macro"}
+  }
+]
