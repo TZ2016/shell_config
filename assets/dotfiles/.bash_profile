@@ -19,6 +19,13 @@ hint () {
   echo 'git commands: switch, conflict, graph';
 }
 
+alias cs162vagr='cd ~/workspace/ && vagrant up && eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa && vagrant ssh'
+cs162push () {
+  git push origin master;
+  git push origin master:ag/hw"$1";
+  git push origin master:release/hw"$1";
+}
+
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
